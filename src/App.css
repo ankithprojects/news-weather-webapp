@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: linear-gradient(135deg, #c84c50 0%, #a9492f 99%, #623d32 100%);
   min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.news-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(32, 40, 152, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.form-group:last-child {
+  margin-top: 20px;
+}
+
+label {
+  margin-right: 9px;
+  font-weight: bold;
+  color: #080808;
+}
+
+select, input[type="date"], input[type="submit"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+select, input[type="date"] {
+  width: 200px;
+  background-color: #fff;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+.news-list {
+  display: grid;
+  gap: 20px;
+}
+
+.news-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+}
+
+.news-item h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.news-item a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.news-item a:hover {
+  color: #155db1;
+  text-decoration: underline;
+}
+
+/* Existing styles */
+
+/* New styles for navigation */
+.app-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-button.active {
+  background-color: #4CAF50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Styles for Weather component */
+.weather-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(32, 40, 152, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-info {
+  margin-top: 20px;
+}
+
+.hourly-forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.forecast-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+footer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 90px;
+  font-size: 14px;
+  color: #181717;
+}
+
+footer a {
+  color: #0080ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
